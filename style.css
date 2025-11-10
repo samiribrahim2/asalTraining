@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #00a0a0;
+  --fontFamily: Arial, sans-serif;
+  --secondry-color: #f2f2f2;
+  --dark-primary-color: #000000;
+  --dark-secondry-color: #e2c20d;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10%;
+}
+
+header {
+  background-color: white;
+  box-shadow: 0px 0px 15px rgb(144 210 211);
+  display: flex;
+  flex: 3;
+  width: 100vw;
+  height: 10vh;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  .bookimage {
+    /* border: 3px solid black; */
+    display: flex;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 50%;
+    }
+  }
+  .menu {
+    display: flex;
+    /* border: 3px solid black; */
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    ul {
+      width: 100%;
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      justify-content: space-around;
+    }
+  }
+  .icons {
+    height: 100%;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.welcome {
+  position: relative;
+  /* top: 10vh; */
+  width: 100%;
+  height: 100vh;
+  /* border: 5px solid black; */
+  display: flex;
+  flex: 2;
+  background-image: url("image/about.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.9); /* white overlay with opacity */
+  background-blend-mode: lighten; /*or 'overlay', 'screen', etc. */
+  .welcome-text {
+    flex: 1;
+    align-content: center;
+    padding: 10vh;
+    button {
+      margin-top: 2em;
+      background-color: var(--primary-color);
+      color: var(--secondry-color);
+      border: none;
+      padding: 1vh;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+
+    button:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    .WelcomeWord {
+      display: flex;
+      flex-direction: column;
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 3rem;
+      font-weight: bold;
+      line-height: 1.2;
+      color: #000;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      line-height: 1.3em;
+    }
+    .span-1 {
+    color: var(--primary-color);
+  }
+  }
+  .welcome-image {
+    flex: 1;
+    width: 100%;
+    /* border: 5px solid black; */
+    align-content: center;
+    img{
+      height: 50%;
+      width: 100%;
+    }
+
+  }
+}
+.Services {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  gap: 5vh;
+
+  .ServCard {
+    height: 25vh;
+    justify-content: center;
+    border: 2px solid #00a7b5;
+    box-shadow: 0 0 10px #089da1;
+    padding: 1vh;
+    margin: 1em;
+    text-align: center;
+
+    .icon {
+      align-items: center;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    .ServCard {
+      justify-items: center;
+      align-content: center;
+
+      .icon {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: medium;
+      }
+
+      p {
+        font-size: small;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+
+    .ServCard {
+      height: auto;
+
+      justify-items: center;
+      align-content: center;
+
+      .icon {
+        font-size: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: small;
+      }
+
+      p {
+        font-size: x-small;
+      }
+    }
+  }
+}
