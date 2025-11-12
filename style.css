@@ -442,3 +442,114 @@ header {
     color: var(--dark-primary-color);
   }
 }
+.arrivals {
+  position: relative;
+  margin-top: 30vh;
+  width: 100%;
+  height: auto;
+  line-height: 3rem;
+  margin-top: 10vh;
+
+  h3 {
+    text-align: center;
+    font-size: xx-large;
+    font-family: var(--fontFamily);
+    font-weight: 600;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  i {
+    color: var(--primary-color);
+  }
+
+  .arrival {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 2fr);
+    grid-gap: 5vh;
+
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 480px) {
+      grid-template-columns: 1/2fr;
+      padding: 3rem;
+      gap: 2vh;
+    }
+
+    .arrivalcard {
+      height: auto;
+      border: 1px solid rgb(176 176 176);
+      padding-top: 4px;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        position: relative;
+        left: 15%;
+        width: 70%;
+        margin: 0px;
+        align-items: center;
+        object-fit: cover;
+        transition: transform 0.8s;
+
+        &:hover {
+          transform: scale(1.06);
+          
+        }
+
+        @media screen and (max-width: 768px) {
+          width: 80%;
+          left: 10%;
+        }
+
+        @media screen and (max-width: 480px) {
+          width: 90%;
+          left: 5%;
+        }
+      }
+
+      .arrivaldetails {
+        font-size: medium;
+        text-align: center;
+        line-height: 3vh;
+        padding: 2px;
+
+        @media screen and (max-width: 768px) {
+          font-size: 0.9rem;
+        }
+
+        button {
+          font-size: smaller;
+          margin: 1vh 0vh;
+          background-color: white;
+          color: black;
+          border: 3px solid var(--primary-color);
+          padding: 3%;
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          @media screen and (max-width: 768px) {
+            font-size: 0.8rem;
+            padding: 5px 8px;
+          }
+
+          @media screen and (max-width: 480px) {
+            padding: 5px 6px;
+          }
+        }
+      }
+    }
+  }
+}
