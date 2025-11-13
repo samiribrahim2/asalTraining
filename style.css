@@ -135,13 +135,7 @@ header {
   background-color: rgba(240, 248, 255, 0.055);
   background: rgba(255, 255, 255, 0.2); 
   backdrop-filter: blur(10px); 
-  #close-menu {
-    position: relative;
-    top: 10vh;
-    left: 40vw;
-    background-color: inherit;
-    border: none;
-  }
+  
 }
 .hidden {
   display: none;
@@ -423,6 +417,7 @@ header {
   .bookcards {
     display: flex;
     overflow-x: scroll;
+    overflow-y: hidden;
     width: 100vw;
     height: auto;
     gap: 1vh;
