@@ -2,17 +2,34 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  background-color: var(--secondry-color);
+  p{
+    color: var(--dark-primary-color);
+  }
 }
 
 * {
   box-sizing: border-box;
 }
 
+.dark-mode{
+  background-color:var(--dark-primary-color);
+  p{
+    color: var(--secondry-color);
+  }
+  ul li a{
+    color: var(--secondry-color);
+  }
+}
+#dark-mode{
+  border: none;
+  background-color: transparent; 
+}
 :root {
   --primary-color: #00a0a0;
   --fontFamily: Arial, sans-serif;
   --secondry-color: #f2f2f2;
-  --dark-primary-color: #000000;
+  --dark-primary-color: #302e2e;
   --dark-secondry-color: #e2c20d;
 }
 
@@ -41,7 +58,7 @@ html {
 }
 
 header {
-  background-color: white;
+  background-color: var(--secondry-color);
   box-shadow: 0px 0px 15px rgb(144 210 211);
   display: flex;
   flex: 3;
@@ -80,7 +97,7 @@ header {
       li{
           a{
               text-decoration: none;
-            color: var(--dark-primary-color);
+              color: var(--dark-primary-color);
           }
       }
     }
@@ -149,12 +166,11 @@ header {
   height: 100vh;
   display: flex;
   flex: 2;
-  background-image: url("image/about.png");
+  background-image: url("image/bg.png");
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: rgba(255, 255, 255, 0.9);
-  background-blend-mode: lighten;
+
   .welcome-text {
     flex: 1;
     align-content: center;
