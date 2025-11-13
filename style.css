@@ -65,7 +65,6 @@ header {
   }
   .menu {
     display: flex;
-    /* border: 3px solid black; */
     width: 100%;
     height: 100%;
     justify-content: center;
@@ -78,6 +77,12 @@ header {
       padding: 0;
       margin: 0;
       justify-content: space-around;
+      li{
+          a{
+              text-decoration: none;
+            color: var(--dark-primary-color);
+          }
+      }
     }
   }
   .icons {
@@ -90,7 +95,7 @@ header {
   #menu-icon {
     display: none;
     margin: 0px 10px;
-    background-color:   inherit  ;
+    background-color: inherit;
     border: none;
   }
   @media screen and (max-width: 468px) {
@@ -100,44 +105,47 @@ header {
     #menu-icon {
       display: block;
     }
-    
   }
 }
 
 .mobile-menu {
-
   position: fixed;
-    ul {
-      height: 100vh;
-      list-style: none;
-      align-content: center;
-      padding: 0px;
-      li {
-        padding-top: 15px;
-      }
-    }
-    z-index: 10000;;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
+  ul {
     height: 100vh;
-    background-color: rgba(240, 248, 255, 0.055);
-    background: rgba(255, 255, 255, 0.2); /* Slight transparency */
-    backdrop-filter: blur(10px); /* Adjust blur strength */
-    #close-menu{
-      position: relative;
-      top:10vh;
-      left: 40vw;;
-       background-color:   inherit  ;
-    border: none;
+    list-style: none;
+    align-content: center;
+    padding: 0px;
+    li {
+      padding-top: 15px;
+  
+          a{
+              text-decoration: none;
+            color: var(--dark-primary-color);
+          }
+      
     }
   }
-  .hidden{
-    display: none;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(240, 248, 255, 0.055);
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(10px); 
+  #close-menu {
+    position: relative;
+    top: 10vh;
+    left: 40vw;
+    background-color: inherit;
+    border: none;
   }
-
+}
+.hidden {
+  display: none;
+}
 
 /* -------------------------------------------------------------------------------------------------------------------------------- */
 .welcome {
@@ -205,6 +213,8 @@ header {
     display: none;
   }
 }
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
 .Services {
   width: 100%;
   display: grid;
@@ -287,6 +297,7 @@ header {
     }
   }
 }
+/* -------------------------------------------------------------------------------------------------------------------------------- */
 .aboutSec {
   display: flex;
   justify-content: space-between;
@@ -343,7 +354,6 @@ header {
     height: 40%;
 
     .aboutL {
-      /* margin-left: 5rem; */
       display: none;
       img {
         display: none;
@@ -401,6 +411,7 @@ header {
     }
   }
 }
+/* -------------------------------------------------------------------------------------------------------------------------------- */
 
 .Featured_Books {
   display: flex;
@@ -419,12 +430,6 @@ header {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #ddd;
     border-radius: 10px;
-
-    /* &:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    } */
-
     .Book_card {
       display: flex;
       flex-direction: column;
@@ -493,6 +498,8 @@ header {
     color: var(--dark-primary-color);
   }
 }
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
 .arrivals {
   position: relative;
   margin-top: 30vh;
@@ -555,7 +562,6 @@ header {
 
         &:hover {
           transform: scale(1.06);
-          
         }
 
         @media screen and (max-width: 768px) {
@@ -603,4 +609,77 @@ header {
       }
     }
   }
+}
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+.Reviews {
+  padding: 2rem 6rem ;
+
+  @media screen and (max-width: 1024px) {
+    padding: 3rem;
+  }
+}
+
+.Review-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3vh;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.Review-title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1rem;
+}
+
+.Review-profile {
+  display: grid;
+  box-shadow: 0px 0px 7px var(--primary-color);
+  position: relative;
+  padding: 1rem;
+  grid-template-rows: repeat(4, auto-fit);
+}
+
+.Review-profile::before {
+  content: ",,";
+  opacity: 0.3;
+  position: absolute;
+  font-size: 12em;
+  top: -100px;
+  right: 0;
+}
+
+.Review-profile img {
+  width: 22%;
+  border-radius: 50%;
+}
+
+.Review-profile p:nth-of-type(2) {
+  margin-top: 0;
+  font-size: 0.8em;
+  text-align: justify;
+}
+
+.Review-profile p:first-of-type {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 1em 0;
+}
+
+.Review-profile .rates {
+  margin-bottom: 1em;
 }
