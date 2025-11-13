@@ -3,7 +3,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   background-color: var(--secondry-color);
-  p{
+  p {
     color: var(--dark-primary-color);
   }
 }
@@ -12,18 +12,18 @@ body {
   box-sizing: border-box;
 }
 
-.dark-mode{
-  background-color:var(--dark-primary-color);
-  p{
+.dark-mode {
+  background-color: var(--dark-primary-color);
+  p {
     color: var(--secondry-color);
   }
-  ul li a{
+  ul li a {
     color: var(--secondry-color);
   }
 }
-#dark-mode{
+#dark-mode {
   border: none;
-  background-color: transparent; 
+  background-color: transparent;
 }
 :root {
   --primary-color: #00a0a0;
@@ -69,7 +69,6 @@ header {
   position: fixed;
   z-index: 1;
   .bookimage {
-    /* border: 3px solid black; */
     display: flex;
     flex: 1;
     height: 100%;
@@ -94,12 +93,18 @@ header {
       padding: 0;
       margin: 0;
       justify-content: space-around;
-      li{
-          a{
-              text-decoration: none;
-              color: var(--dark-primary-color);
-          }
+      li {
+        a {
+          text-decoration: none;
+          color: var(--dark-primary-color);
+        }
       }
+    }
+  }
+
+  @media (max-width: 1020px) {
+    .menu {
+      flex: 3;
     }
   }
   .icons {
@@ -134,12 +139,11 @@ header {
     padding: 0px;
     li {
       padding-top: 15px;
-  
-          a{
-              text-decoration: none;
-            color: var(--dark-primary-color);
-          }
-      
+
+      a {
+        text-decoration: none;
+        color: var(--dark-primary-color);
+      }
     }
   }
   z-index: 10000;
@@ -150,9 +154,8 @@ header {
   width: 100vw;
   height: 100vh;
   background-color: rgba(240, 248, 255, 0.055);
-  background: rgba(255, 255, 255, 0.2); 
-  backdrop-filter: blur(10px); 
-  
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
 }
 .hidden {
   display: none;
@@ -458,7 +461,7 @@ header {
       border: 1px solid gray;
       text-align: center;
       align-items: center;
-      gap: 4vh;
+      /* gap: 4vh; */
       margin-bottom: 1vh;
 
       h4 {
@@ -624,7 +627,7 @@ header {
 /* -------------------------------------------------------------------------------------------------------------------------------- */
 
 .Reviews {
-  padding: 2rem 6rem ;
+  padding: 2rem 6rem;
 
   @media screen and (max-width: 1024px) {
     padding: 3rem;
