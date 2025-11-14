@@ -697,3 +697,154 @@ header {
 .Review-profile .rates {
   margin-bottom: 1em;
 }
+
+.digital-image {
+  background-image: url(image/banner.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 30%;
+  position: relative;
+}
+
+.digital-btn {
+  position: absolute;
+  bottom: 31%;
+  left: 7%;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 1vh;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 8rem;
+    height: 2rem;
+    font-size: 1em;
+    bottom: 25%;
+    padding: 0vh;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 6rem;
+    height: 1.5rem;
+    font-size: 0.87em;
+    bottom: 25%;
+    padding: 0vh;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 4rem;
+    height: 1rem;
+    font-size: 0.5em;
+    bottom: 25%;
+    padding: 0vh;
+  }
+}
+
+.digital-title {
+  display: none;
+}
+
+.digital-btn:hover,
+.digital-smallbtn:hover {
+  cursor: pointer;
+}
+
+p {
+  line-height: 1.3em;
+}
+
+/* --------------------------------------------------------Our Blogs ----------------------------------------------------- */
+.OurBlog-title h1 {
+  text-align: center;
+  margin-top: 0;
+  font-size: 2em;
+}
+
+.OurBlog-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vh;
+  margin-left: 0 auto;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 0px 25% 0px 25%;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 0px 25% 0px 25%;
+  }
+
+  @media screen and (max-width: 480px) {
+    grid-template-columns: 1fr;
+    margin-left: 2.5rem;
+  }
+}
+
+.OurBlog-card {
+  width: 100%;
+  max-width: 30rem;
+  margin: 0 auto;
+
+  @media screen and (max-width: 480px) {
+    width: 20rem;
+  }
+}
+
+.OurBlog-image {
+  height: 20em;
+  width: 100%;
+  overflow: hidden;
+}
+
+.OurBlog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.OurBlog-context,
+.OurBlog-icons {
+  padding: 0 1em;
+  text-align: justify;
+}
+
+.OurBlog-context p {
+  margin-bottom: 0.8em;
+}
+
+.OurBlog-context p:first-of-type {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 0.5em 0;
+}
+
+.OurBlog-icons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+}
+
+.OurBlog-icons .fa-calendar-days:hover {
+  color: orange;
+}
+
+.OurBlog-icons .fa-heart:hover {
+  color: red;
+}
+
+.shadow {
+  box-shadow: 0px 0px 0.4rem var(--primary-color);
+}
