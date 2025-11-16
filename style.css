@@ -3,9 +3,12 @@ body {
   padding: 0;
   overflow-x: hidden;
   background-color: var(--secondry-color);
-  p {
+  p { 
     color: var(--dark-primary-color);
   }
+}
+h1 , h2 , h3 , span , i{
+  color: var(--dark-primary-color);
 }
 
 * {
@@ -132,14 +135,17 @@ header {
 
 .mobile-menu {
   position: fixed;
+  margin-bottom: 50px ;
   ul {
     height: 100vh;
     list-style: none;
     align-content: center;
+    justify-content: center;
     padding: 0px;
+  
     li {
       padding-top: 15px;
-
+      
       a {
         text-decoration: none;
         color: var(--dark-primary-color);
@@ -350,7 +356,7 @@ header {
       font-size: 3rem;
       font-weight: bold;
       line-height: 1.2;
-      color: #000;
+      /* color: #000; */
       margin-bottom: 1rem;
     }
 
@@ -397,7 +403,7 @@ header {
         font-size: 3rem;
         font-weight: bold;
         line-height: 1.2;
-        color: #000;
+        /* color: #000; */
         margin-bottom: 1rem;
       }
 
@@ -644,10 +650,7 @@ header {
     grid-template-rows: repeat(2, 1fr);
   }
 
-  @media screen and (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
+
 
   @media screen and (max-width: 480px) {
     grid-template-columns: 1fr;
@@ -776,19 +779,13 @@ p {
 
   @media screen and (max-width: 1024px) {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     margin: 0px 25% 0px 25%;
   }
 
-  @media screen and (max-width: 768px) {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    margin: 0px 25% 0px 25%;
-  }
 
   @media screen and (max-width: 480px) {
     grid-template-columns: 1fr;
-    /* margin-left: 2.5rem; */
     justify-content: center;
   }
 }
