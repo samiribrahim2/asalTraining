@@ -485,8 +485,8 @@ header {
       .FeaturedBtn {
         border: 2px solid var(--primary-color);
         padding: 1vh;
-        background-color: white;
-
+        background-color: var(--secondry-color);
+        color: var(--dark-primary-color);
         &:hover {
           cursor: pointer;
         }
@@ -611,8 +611,8 @@ header {
         button {
           font-size: smaller;
           margin: 1vh 0vh;
-          background-color: white;
-          color: black;
+          background-color: var(--secondry-color);
+          color: var(--dark-primary-color);
           border: 3px solid var(--primary-color);
           padding: 3%;
 
