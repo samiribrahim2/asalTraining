@@ -22,3 +22,12 @@ document.getElementById("dark-mode").addEventListener("click", () => {
 
     darkMode = !darkMode ;
 });
+const colorPicker = document.getElementById("inputcolor");
+document.getElementById("color").addEventListener("click" , ()=>{
+
+  document.getElementById("inputcolor").classList.toggle("hidden");
+})
+
+colorPicker.addEventListener("input" , ()=>{
+  document.documentElement.style.setProperty("--primary-color" , colorPicker.value )
+})

@@ -33,7 +33,7 @@ h1 , h2 , h3 , span , i{
   --fontFamily: Arial, sans-serif;
   --secondry-color: #f2f2f2;
   --dark-primary-color: #302e2e;
-  --dark-secondry-color: #e2c20d;
+  /* --dark-secondry-color: #000000; */
 }
 
 ::-webkit-scrollbar {
@@ -132,7 +132,10 @@ header {
     }
   }
 }
-
+#color{
+  border: none;
+  background-color: var(--secondry-color);
+}
 .mobile-menu {
   position: fixed;
   margin-bottom: 50px ;
