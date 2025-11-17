@@ -10,7 +10,16 @@ body {
 h1 , h2 , h3 , span , i{
   color: var(--dark-primary-color);
 }
+#searchBox{
 
+}
+#sreachbutton{
+
+}
+.highlight {
+  background-color: yellow; 
+  padding: 2px;
+}
 * {
   box-sizing: border-box;
 }
@@ -446,12 +455,12 @@ header {
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
-    width: 100vw;
+    width: 95vw;
     height: auto;
     gap: 1vh;
-
+    padding-left: 2vw;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     border-radius: 10px;
     .Book_card {
       display: flex;
@@ -549,7 +558,7 @@ header {
   .arrival {
     display: grid;
     padding: 10px;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 2fr);
     grid-gap: 5vh;
 
