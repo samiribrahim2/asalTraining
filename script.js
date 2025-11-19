@@ -4,13 +4,18 @@ document.getElementById("menu-icon").addEventListener("click", () => {
   // console.log("clicked");
   document.querySelector(".mobile-menu").classList.toggle("hidden");
 });
-document.querySelector(".mobile-menu").addEventListener("click", () => {
+document.querySelector(".mobile-menu").addEventListener("click", function () {
   console.log("clicked");
-  document.querySelector(".mobile-menu").classList.toggle("hidden");
+  this.classList.toggle("hidden");
 });
-let darkMode = false;
+let darkMode = localStorage.getItem("darkMode") === "true";
+
+if (darkMode) {
+  document.documentElement.style.setProperty("--secondry-color", "#302e2e");
+  document.documentElement.style.setProperty("--dark-primary-color", "#f2f2f2");
+}
+
 document.getElementById("dark-mode").addEventListener("click", () => {
-    // console.log("clicked");
     if(!darkMode){
         document.documentElement.style.setProperty("--secondry-color" , "#302e2e")
         document.documentElement.style.setProperty("--dark-primary-color" , "#f2f2f2")
@@ -21,6 +26,7 @@ document.getElementById("dark-mode").addEventListener("click", () => {
     }
 
     darkMode = !darkMode ;
+    localStorage.setItem("darkMode" , darkMode) ;
 });
 const colorPicker = document.getElementById("inputcolor");
 document.getElementById("color").addEventListener("click" , ()=>{
@@ -28,8 +34,13 @@ document.getElementById("color").addEventListener("click" , ()=>{
   document.getElementById("inputcolor").classList.toggle("hidden");
 })
 
+let pickedcolor = localStorage.getItem("pickedcolor");
+if(pickedcolor){
+    document.documentElement.style.setProperty("--primary-color" , pickedcolor )
+}
 colorPicker.addEventListener("input" , ()=>{
   document.documentElement.style.setProperty("--primary-color" , colorPicker.value )
+  localStorage.setItem("pickedcolor" , colorPicker.value )
 })
 
 document.getElementById("sreachbutton").addEventListener("click" , ()=>{
